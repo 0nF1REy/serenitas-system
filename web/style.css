@@ -201,3 +201,34 @@ form input[type="submit"]:focus {
     box-shadow: 0 0 12px #ff4d4d;
     outline: none;
 }
+
+/* Listagem de produtos */
+.produtos-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.produtos-th, .produtos-td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.produtos-th {
+    background-color: #ff8080;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+.produtos-tr:hover .produtos-td {
+    background-color: #fff0f0;
+    transition: background-color 0.2s ease-in-out;
+}
