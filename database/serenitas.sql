@@ -12,7 +12,9 @@ CREATE TABLE IF NOT EXISTS tb_produto (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP NULL DEFAULT NULL,
-    INDEX idx_deleted_at (deleted_at)
+    INDEX idx_deleted_at (deleted_at),
+    INDEX idx_nome (nome),
+    INDEX idx_marca (marca)
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 SHOW TABLES;
@@ -28,6 +30,8 @@ VALUES ('Notebook', 'Dell', 3499.90);
 DELETE FROM tb_produto WHERE id_produto = 1;
 
 SELECT * FROM tb_produto;
+
+SELECT * FROM tb_produto WHERE nome LIKE "%No%";
 
 DROP DATABASE serenitas_db;
 
