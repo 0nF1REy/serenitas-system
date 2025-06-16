@@ -93,36 +93,7 @@ Para executar localmente, siga os seguintes passos:
     ```
     http://localhost:8080/serenitas-system/
     ```
-
-## 🐳 Executar com Docker (alternativa)
-
-Para executar com Docker, siga os seguintes passos:
-
-1. **Compile seu projeto no seu computador (fora do Docker)**
-
-    ```bash
-    # No terminal, dentro da pasta do seu projeto, rode:
-    ant clean compile dist
-    ```
-
-    Isso vai criar o arquivo **.war** dentro da pasta **dist/**, por exemplo:
-
-    ```
-    dist/serenitas.war
-    ```
-
-2. **Construa a imagem Docker com Compose:**
-
-    ```bash
-    docker-compose up --build
-    ```
-
-3. **Acesse a aplicação no navegador:**
-
-    ```
-    http://localhost:2004/serenitas-system/
-    ```
-
+    
 ---
 
 ## Autor 🧑🛡️ 
