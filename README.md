@@ -14,14 +14,22 @@
 
 ### Pré-requisitos
 
-<img src="./readme_assets/git-logo.png" width="200" alt="Git Logo" />
+<a href="https://git-scm.com/" target="_blank">
+  <img src="./readme_assets/git-logo.png" width="200" alt="Git Logo" />
+</a>
+<a href="https://ant.apache.org/" target="_blank">
+  <img src="./readme_assets/apache-ant-logo.png" width="200" alt="Apache Ant Logo" />
+</a>
+<a href="https://www.oracle.com/java/" target="_blank">
+  <img src="./readme_assets/java-jdk-logo.png" width="200" alt="Java JDK Logo" />
+</a>
+<a href="https://www.mysql.com/" target="_blank">
+  <img src="./readme_assets/mysql-logo.png" width="200" alt="MySQL Logo" />
+</a>
+<a href="https://tomcat.apache.org/" target="_blank">
+  <img src="./readme_assets/apache-tomcat-logo.png" width="200" alt="MySQL Logo" />
+</a>
 
-- Java JDK 8 ou superior
-- [Apache Ant](https://ant.apache.org/)
-- [Apache Tomcat 9 ou 10](https://tomcat.apache.org/)
-- MySQL / MariaDB
-- Editor como VS Code, NetBeans ou IntelliJ
-- Vim
 
 </div>
 
@@ -56,43 +64,46 @@ Para executar localmente, siga os seguintes passos:
     ant clean dist
     ```
 
-5.  **Implantar o WAR no Tomcat:** 
+5.  **Determinar o caminho do webapps:** 
 
     ```bash
+    # Exemplo para Arch Linux:
+    pacman -Ql tomcat10 | grep webapps
+
+    # Exemplo para Debian/Ubuntu:
+    dpkg -L tomcat10 | grep webapps
+
+    # Exemplo para Fedora/CentOS/RHEL/openSUSE e Mageia:
+    rpm -ql tomcat | grep webapps
+
+    # Exemplo para Alpine Linux:
+    apk info -q tomcat* --files | grep webapps
+
+    # Exemplo para Gentoo:
+    equery files tomcat | grep webapps
+
+    # Exemplo para Void Linux:
+    xbps-query -f tomcat | grep webapps
+
+    # Exemplo para Amazon Linux:
+    rpm -ql tomcat | grep webapps
+    ```
+
+6.  **Implantar o WAR no Tomcat:** 
+
+    ```bash
+    # Copie serenitas-system.war para o diretório webapps do Tomcat.
     sudo cp dist/serenitas-system.war /var/lib/tomcat10/webapps/
-    ```
+    ```    
 
-6.  **Configurar as Variáveis de Ambiente para o Tomcat:** 
-
-    ```bash
-    sudo vim /usr/share/tomcat10/bin/setenv.sh
-    ```
-
-7.  **Adicionar o seguinte conteúdo ao sh:** 
+7.  **Reiniciar e iniciar o Tomcat:** 
 
     ```bash
-    # setenv.sh
-    while IFS='=' read -r key value
-    do
-      export "$key"="$value"
-    done < /path/to/your/serenitas-system/.env  
-    ```
-
-8.  **Salve o arquivo e torne-o executável:** 
-
-    ```bash
-    sudo chmod +x /usr/share/tomcat10/bin/setenv.sh
-    sudo chown tomcat10:tomcat10 /usr/share/tomcat10/bin/setenv.sh
-    ```
-
-9.  **Reiniciar e iniciar o Tomcat:** 
-
-    ```bash
-    sudo systemctl restart tomcat10
+    sudo systemctl stop tomcat10
     sudo systemctl start tomcat10
     ```
 
-10. **Acesse a aplicação no navegador:**
+8. **Acesse a aplicação no navegador:**
 
     ```
     http://localhost:8080/serenitas-system/
@@ -100,9 +111,9 @@ Para executar localmente, siga os seguintes passos:
     
 ---
 
-## Autor 🧑🛡️ 
-
 <div align="center">
+
+## Autor 🧑🛡️ 
   <table>
   <tr>
     <td align="center">
