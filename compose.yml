@@ -1,0 +1,6 @@
+services:
+  serenitas:
+    build: .
+    container_name: serenitas-system
+    ports:
+      - "2004:8080"
