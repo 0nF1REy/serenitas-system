@@ -21,6 +21,7 @@
 - [Apache Tomcat 9 ou 10](https://tomcat.apache.org/)
 - MySQL / MariaDB
 - Editor como VS Code, NetBeans ou IntelliJ
+- Vim
 
 </div>
 
@@ -49,46 +50,49 @@ Para executar localmente, siga os seguintes passos:
     mysql -u root -p < database/serenitas.sql
     ```
 
-4. **Verifique onde o Tomcat está instalado:**
+4.  **Compilar e Empacotar o Projeto:** 
 
     ```bash
-    # No Arch Linux (exemplo):
-    pacman -Ql tomcat10 | grep webapps
+    ant clean dist
     ```
+
+5.  **Implantar o WAR no Tomcat:** 
 
     ```bash
-    # No Ubuntu/Debian (exemplo):
-    dpkg -L tomcat9 | grep webapps
+    sudo cp dist/serenitas-system.war /var/lib/tomcat10/webapps/
     ```
 
-    O resultado deve mostrar o caminho do diretório `webapps` do Tomcat, algo como:
-
-    ```
-    tomcat10 /var/lib/tomcat10/webapps/
-    ```
-
-5. **Copie a pasta `web` do projeto para o diretório `webapps` do Tomcat:**
+6.  **Configurar as Variáveis de Ambiente para o Tomcat:** 
 
     ```bash
-    # Execute dentro da pasta do projeto (serenitas-system):
-    sudo cp -r ./web /var/lib/tomcat10/webapps/serenitas-system
+    sudo vim /usr/share/tomcat10/bin/setenv.sh
     ```
 
-6. **Compile o projeto com Apache Ant:**
+7.  **Adicionar o seguinte conteúdo ao sh:** 
 
     ```bash
-    ant clean
-    ant compile
-    ant dist
+    # setenv.sh
+    while IFS='=' read -r key value
+    do
+      export "$key"="$value"
+    done < /path/to/your/serenitas-system/.env  
     ```
 
-7. **Inicie o servidor Tomcat:**
+8.  **Salve o arquivo e torne-o executável:** 
 
     ```bash
+    sudo chmod +x /usr/share/tomcat10/bin/setenv.sh
+    sudo chown tomcat10:tomcat10 /usr/share/tomcat10/bin/setenv.sh
+    ```
+
+9.  **Reiniciar e iniciar o Tomcat:** 
+
+    ```bash
+    sudo systemctl restart tomcat10
     sudo systemctl start tomcat10
     ```
 
-8. **Acesse a aplicação no navegador:**
+10. **Acesse a aplicação no navegador:**
 
     ```
     http://localhost:8080/serenitas-system/
