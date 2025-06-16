@@ -1,5 +1,12 @@
+# Arquivos de ambiente e build
 .env
 *.class
 build/
 nbproject/private/
 
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
