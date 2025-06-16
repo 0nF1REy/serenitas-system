@@ -10,3 +10,6 @@ nbproject/private/
 # IntelliJ IDEA
 .idea/
 *.iml
+
+# Artefatos de distribuição
+dist/
