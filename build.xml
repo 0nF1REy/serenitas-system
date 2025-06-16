@@ -48,9 +48,18 @@
         </copy>
     </target>
 
+    <!-- Criar o arquivo WAR -->
+    <target name="war" depends="prepare-dist">
+        <war destfile="${dist.dir}/serenitas-system.war" webxml="${web.dir}/WEB-INF/web.xml">
+            <fileset dir="${dist.dir}" excludes="${dist.dir}/WEB-INF/web.xml"/>
+        </war>
+    </target>
+
     <!-- Build final para deploy -->
-    <target name="dist" depends="prepare-dist">
-        <echo>Projeto compilado e pronto na pasta 'dist/' para deploy.</echo>
+    <target name="dist" depends="war">
+        <echo>Projeto compilado e WAR criado na pasta 'dist/' para deploy.</echo>
     </target>
 
 </project>
+
+    
