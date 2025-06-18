@@ -1,18 +1,64 @@
-# Serenitas System
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+# 📦 Serenitas System
+
 ![Status](https://img.shields.io/badge/status-Conclu%C3%ADdo-brightgreen)
+![Java](https://img.shields.io/badge/Java-8%2B-blue.svg)
+![Build](https://img.shields.io/badge/build-Apache%20Ant-red.svg)
+![Platform](https://img.shields.io/badge/platform-Web-lightgrey.svg)
+![Database](https://img.shields.io/badge/database-MySQL-orange.svg)
+![Tomcat](https://img.shields.io/badge/server-Tomcat-yellow.svg)
+![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-<ul>
-  <li><h3><i>Página principal do projeto:</i></h3></li>
-</ul>
+![Maintained](https://img.shields.io/maintenance/yes/2025?style=for-the-badge)
 
-<img src="./readme_assets/pagina-principal.png" alt="Página principal do projeto: serenitas-system"/>
+## 📖 Descrição
+
+Este repositório abriga o "Serenitas System", um sistema web para gestão de produtos. O projeto foi desenvolvido para simplificar e otimizar o controle de estoque e informações de produtos, oferecendo funcionalidades como cadastro, listagem, alteração, exclusão e importação via CSV. O sistema utiliza tecnologias como Java, JSP, MySQL e Apache Tomcat, criando uma solução completa para gerenciamento de produtos.
+
+Os principais recursos incluem:
+
+*   **Criação de Produto:** Adicione novos produtos ao sistema com facilidade.
+*   **Listagem de Produtos:** Visualize uma lista completa de todos os produtos.
+*   **Atualização de Produto:** Modifique as informações dos produtos existentes.
+*   **Exclusão de Produto:** Remova produtos do sistema.
+*   **Importação CSV:** Importe dados de produtos em massa por meio de arquivos CSV.
+
+## ✨ Funcionalidades
+
+*   Interface web amigável ao usuário.
+*   Funcionalidades completas para gerenciamento de produtos.
+*   Integração com banco de dados para armazenamento persistente.
+*   Importação CSV para entrada eficiente de dados.
+
+## 📸 Capturas de Tela
+
+*   ### *Apresentação:*
+
+<img src="./readme_assets/pagina-principal.png" alt="Apresentação"/>
+
+*   ### *Cadastro de Produtos:*
+
+<img src="./readme_assets/cadastro-de-produtos.png" alt="Cadastro de Produtos"/>
+
+*   ### *Listagem de Produtos:*
+
+<img src="./readme_assets/listagem-de-produtos.png" alt="Listagem de Produtos"/>
+
+*   ### *Consultar Produtos:*
+
+<img src="./readme_assets/consultar-produtos.png" alt="Consultar Produtos"/>
+
+*   ### *Cadastrar via CSV:*
+
+<img src="./readme_assets/cadastrar-via-csv.png" alt="Consultar via CSV"/>
 
 ## 🚀 Começando
 
+Os seguintes softwares precisam estar instalado em seu sistema antes de você poder executar o Serenitas System:
+
 <div align="center">
 
-### Pré-requisitos
+## Pré-requisitos
 
 <a href="https://git-scm.com/" target="_blank">
   <img src="./readme_assets/git-logo.png" width="200" alt="Git Logo" />
@@ -30,14 +76,20 @@
   <img src="./readme_assets/apache-tomcat-logo.png" width="200" alt="MySQL Logo" />
 </a>
 
-
 </div>
+
+*   **Git:** Para clonar o repositório. [https://git-scm.com/](https://git-scm.com/)
+*   **Apache Ant:** Para compilar o projeto. [https://ant.apache.org/](https://ant.apache.org/)
+*   **Java JDK:** Kit de Desenvolvimento Java 8 ou superior. [https://www.oracle.com/java/](https://www.oracle.com/java/)
+*   **MySQL:** Servidor MySQL. [https://www.mysql.com/](https://www.mysql.com/)
+*   **Apache Tomcat:** Contêiner de Servlets para executar a aplicação. [https://tomcat.apache.org/](https://tomcat.apache.org/)
+
 
 ---
 
-## 📦 Instalação
+### 📦 Instalação
 
-Para executar localmente, siga os seguintes passos:
+Para executar o **Serenitas System** localmente, siga estes passos:
 
 1.  **Clone o repositório:**
 
@@ -58,13 +110,28 @@ Para executar localmente, siga os seguintes passos:
     mysql -u root -p < database/serenitas.sql
     ```
 
-4.  **Compilar e Empacotar o Projeto:** 
+4.  **Configure a conexão com o banco de dados**
+
+    No arquivo de configuração **.env** localizado na pasta **web/**, ajuste as variáveis de ambiente para conectar ao seu banco de dados **MySQL**. Exemplo de conteúdo do arquivo **.env**:
+
+    ```bash
+    # URL de conexão com o banco de dados MySQL
+    DB_URL=jdbc:mysql://localhost:3306/serenitas_db
+
+    # Usuário do banco de dados
+    DB_USER=root
+
+    # Senha do banco de dados
+    DB_PASSWORD=verysecret
+    ```
+
+5.  **Compilar e Empacotar o Projeto:** 
 
     ```bash
     ant clean dist
     ```
 
-5.  **Determinar o caminho do webapps:** 
+6.  **Determinar o caminho do webapps:** 
 
     ```bash
     # Exemplo para Arch Linux:
@@ -89,21 +156,21 @@ Para executar localmente, siga os seguintes passos:
     rpm -ql tomcat | grep webapps
     ```
 
-6.  **Implantar o WAR no Tomcat:** 
+7.  **Implantar o WAR no Tomcat:** 
 
     ```bash
     # Copie serenitas-system.war para o diretório webapps do Tomcat.
     sudo cp dist/serenitas-system.war /var/lib/tomcat10/webapps/
     ```    
 
-7.  **Reiniciar e iniciar o Tomcat:** 
+8.  **Reiniciar e iniciar o Tomcat:** 
 
     ```bash
     sudo systemctl stop tomcat10
     sudo systemctl start tomcat10
     ```
 
-8. **Acesse a aplicação no navegador:**
+9. **Acesse a aplicação no navegador:**
 
     ```
     http://localhost:8080/serenitas-system/
@@ -126,40 +193,40 @@ Para executar localmente, siga os seguintes passos:
 </table>
 </div>
 
-## 📫 Contribuir
+## 🤝 Contribuindo
 
-Se você deseja contribuir com o projeto, siga os seguintes passos:
+Contribuições são bem-vindas! Se você deseja contribuir com o projeto, siga estes passos:
 
-1. **Faça um fork** do repositório.
+1.  **Faça um fork** do repositório.
 
-2. **Crie uma branch** com a sua funcionalidade:
+2.  **Crie uma branch** para sua funcionalidade ou correção de bug:
 
-   ```bash
-   git checkout -b feature/minha-funcionalidade
-   ```
+    ```bash
+    git checkout -b feature/sua-funcionalidade
+    ```
 
-3. **Faça as alterações necessárias**.
+3.  **Faça suas alterações**.
 
-4. **Faça um commit** com suas alterações:
+4.  **Realize o commit das suas alterações:**
 
-   ```bash
-   git commit -m "Adicionado minha funcionalidade"
-   ```
+    ```bash
+    git commit -m "Adiciona sua funcionalidade ou correção"
+    ```
 
-5. **Envie para o repositório remoto**:
+5.  **Envie para o seu repositório forkado:**
 
-   ```bash
-   git push origin feature/minha-funcionalidade
-   ```
+    ```bash
+    git push origin feature/sua-funcionalidade
+    ```
 
-6. **Abra um pull request** para a branch `main` do projeto original.
+6.  **Abra um pull request** para a branch `main` do projeto original.
 
-### Documentações úteis
+### Recursos Úteis
 
 - **<a href="https://www.atlassian.com/br/git/tutorials/making-a-pull-request" target="_blank">📝 Como criar uma solicitação pull</a>**
 
 - **<a href="https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716" target="_blank">💾 Padrão de commit</a>**
 
-## Licença
+## 📜 Licença
 
-<a href="./LICENSE" target="_blank"><b>Licença MIT</b></a>
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
