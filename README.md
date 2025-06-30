@@ -1,17 +1,25 @@
-# 📦 Serenitas System
+<h1 align="center">
+  Serenitas System
+</h1>
 
-![Status](https://img.shields.io/badge/status-Conclu%C3%ADdo-brightgreen)
-![Java](https://img.shields.io/badge/Java-8%2B-blue.svg)
-![Build](https://img.shields.io/badge/build-Apache%20Ant-red.svg)
-![Platform](https://img.shields.io/badge/platform-Web-lightgrey.svg)
-![Database](https://img.shields.io/badge/database-MySQL-orange.svg)
-![Tomcat](https://img.shields.io/badge/server-Tomcat-yellow.svg)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+<div align="center">
 
-![Maintained](https://img.shields.io/maintenance/yes/2025?style=for-the-badge)
+  ![Maintained](https://img.shields.io/maintenance/yes/2025?style=for-the-badge)
+  ![License MIT](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
+  ![Status](https://img.shields.io/badge/status-Conclu%C3%ADdo-brightgreen?style=for-the-badge)
 
-## 📖 Descrição
+<br />
+
+  ![Java 8 ou superior](https://img.shields.io/badge/Java-8%2B-blue?style=for-the-badge&logo=openjdk)
+  ![Build com Apache Ant](https://img.shields.io/badge/Build-Apache%20Ant-red?style=for-the-badge&logo=apacheant)
+  ![Plataforma Web](https://img.shields.io/badge/Plataforma-Web-lightgrey?style=for-the-badge&logo=html5)
+  ![Database MySQL](https://img.shields.io/badge/Database-MySQL-orange?style=for-the-badge&logo=mysql)
+  ![Servidor Tomcat](https://img.shields.io/badge/Servidor-Tomcat-yellow?style=for-the-badge&logo=apachetomcat)
+  ![Contribuições bem-vindas](https://img.shields.io/badge/Contribui%C3%A7%C3%B5es-Welcome-brightgreen?style=for-the-badge&logo=github)
+
+</div>
+
+## 📖 Descrição <a name="descricao"></a>
 
 Este repositório abriga o "Serenitas System", um sistema web para gestão de produtos. O projeto foi desenvolvido para simplificar e otimizar o controle de estoque e informações de produtos, oferecendo funcionalidades como cadastro, listagem, alteração, exclusão e importação via CSV. O sistema utiliza tecnologias como Java, JSP, MySQL e Apache Tomcat, criando uma solução completa para gerenciamento de produtos.
 
@@ -58,7 +66,7 @@ Os seguintes softwares precisam estar instalado em seu sistema antes de você po
 
 <div align="center">
 
-## Pré-requisitos
+## 🔧 Pré-requisitos <a name="requisitos"></a>
 
 <a href="https://git-scm.com/" target="_blank">
   <img src="./readme_assets/git-logo.png" width="200" alt="Git Logo" />
@@ -78,6 +86,8 @@ Os seguintes softwares precisam estar instalado em seu sistema antes de você po
 
 </div>
 
+<br />
+
 *   **Git:** Para clonar o repositório. [https://git-scm.com/](https://git-scm.com/)
 *   **Apache Ant:** Para compilar o projeto. [https://ant.apache.org/](https://ant.apache.org/)
 *   **Java JDK:** Kit de Desenvolvimento Java 8 ou superior. [https://www.oracle.com/java/](https://www.oracle.com/java/)
@@ -87,7 +97,7 @@ Os seguintes softwares precisam estar instalado em seu sistema antes de você po
 
 ---
 
-### 📦 Instalação
+## ⚙️ Como Executar o Projeto <a name="execucao"></a>
 
 Para executar o **Serenitas System** localmente, siga estes passos:
 
@@ -95,22 +105,17 @@ Para executar o **Serenitas System** localmente, siga estes passos:
 
     ```bash
     git clone https://github.com/0nF1REy/serenitas-system.git
-    ```
-
-2.  **Entre no diretório:**
-
-    ```bash
     cd serenitas-system
     ```
 
-3.  **Importe o banco de dados:** 
+2.  **Importe o banco de dados:** 
 
     ```bash
     # Exemplo com MySQL:
     mysql -u root -p < database/serenitas.sql
     ```
 
-4.  **Configure a conexão com o banco de dados**
+3.  **Configure a conexão com o banco de dados**
 
     No arquivo de configuração **.env** localizado na pasta **web/**, ajuste as variáveis de ambiente para conectar ao seu banco de dados **MySQL**. Exemplo de conteúdo do arquivo **.env**:
 
@@ -125,13 +130,13 @@ Para executar o **Serenitas System** localmente, siga estes passos:
     DB_PASSWORD=verysecret
     ```
 
-5.  **Compilar e Empacotar o Projeto:** 
+4.  **Compilar e Empacotar o Projeto:** 
 
     ```bash
     ant clean dist
     ```
 
-6.  **Determinar o caminho do webapps:** 
+5.  **Determinar o caminho do webapps:** 
 
     ```bash
     # Exemplo para Arch Linux:
@@ -156,77 +161,104 @@ Para executar o **Serenitas System** localmente, siga estes passos:
     rpm -ql tomcat | grep webapps
     ```
 
-7.  **Implantar o WAR no Tomcat:** 
+6.  **Implantar o WAR no Tomcat:** 
 
     ```bash
     # Copie serenitas-system.war para o diretório webapps do Tomcat.
     sudo cp dist/serenitas-system.war /var/lib/tomcat10/webapps/
     ```    
 
-8.  **Reiniciar e iniciar o Tomcat:** 
+7.  **Reiniciar e iniciar o Tomcat:** 
 
     ```bash
     sudo systemctl stop tomcat10
     sudo systemctl start tomcat10
     ```
 
-9. **Acesse a aplicação no navegador:**
+## 🌐 Acesso à Aplicação <a name="acesso"></a>
 
-    ```
-    http://localhost:8080/serenitas-system/
-    ```
-    
+Após a implantação bem-sucedida no **Tomcat**, acesse o **Serenitas System** diretamente pelo seu navegador:
+
+- 🔗 **URL de acesso: ```http://localhost:8080/serenitas-system/```**
+  
+Se tudo estiver configurado corretamente, essa URL carregará a interface principal do sistema, onde você poderá gerenciar seus produtos com facilidade.
+
 ---
 
 <div align="center">
 
-## Autor 🧑🛡️ 
-  <table>
+## 👤 Sobre o Desenvolvedor <a name="desenvolvedor"></a>
+
+<table>
   <tr>
     <td align="center">
       <a href="https://github.com/0nF1REy" target="_blank">
-        <img src="./readme_assets/alan-ryan.jpg" height="160px;" alt="Foto de Alan Ryan"/><br>
-          <b>Alan Ryan</b>  
+        <img src="./readme_assets/alan-ryan.jpg" height="160px" style="border-radius: 50%; border: 3px solid #0077B5;" alt="Foto de Alan Ryan"/><br>
+        <b>Alan Ryan</b>
       </a>
+      <p>
+        ☕ Peopleware | Tech Enthusiast | Code Slinger ☕<br>
+        Apaixonado por código limpo, arquitetura escalável e experiências digitais envolventes.
+      </p>
+      <p style="font-weight: bold; color: #0077B5;">
+        Conecte-se comigo:
+      </p>
+      <p>
+        <a href="https://github.com/0nF1REy" target="_blank">
+          <img src="https://img.shields.io/badge/GitHub-0nF1REy-181717?style=for-the-badge&logo=github" alt="GitHub">
+        </a>
+        <a href="https://gitlab.com/alanryan619" target="_blank">
+          <img src="https://img.shields.io/badge/GitLab-@0nF1REy-FCA121?style=for-the-badge&logo=gitlab" alt="GitLab">
+        </a>
+        <a href="https://www.linkedin.com/in/alan-ryan-b115ba228" target="_blank">
+          <img src="https://img.shields.io/badge/LinkedIn-Alan_Ryan-0077B5?style=for-the-badge&logo=linkedin" alt="LinkedIn">
+        </a>
+        <a href="mailto:alanryan619@gmail.com" target="_blank">
+          <img src="https://img.shields.io/badge/Email-alanryan619@gmail.com-D14836?style=for-the-badge&logo=gmail" alt="Email">
+        </a>
+      </p>
     </td>
   </tr>
 </table>
+
 </div>
 
-## 🤝 Contribuindo
+---
 
-Contribuições são bem-vindas! Se você deseja contribuir com o projeto, siga estes passos:
+## 📫 Contribuir <a name="contribuicao"></a>
 
-1.  **Faça um fork** do repositório.
+Contribuições são muito bem-vindas! Se você deseja contribuir com o projeto, por favor, siga estes passos:
 
-2.  **Crie uma branch** para sua funcionalidade ou correção de bug:
+1.  **Faça um Fork** do repositório.
 
-    ```bash
-    git checkout -b feature/sua-funcionalidade
-    ```
-
-3.  **Faça suas alterações**.
-
-4.  **Realize o commit das suas alterações:**
+2.  **Crie uma nova Branch** para sua feature ou correção: 
 
     ```bash
-    git commit -m "Adiciona sua funcionalidade ou correção"
+    git checkout -b feature/nome-da-feature
     ```
 
-5.  **Envie para o seu repositório forkado:**
+3.  **Faça suas alterações** e realize o commit:
 
     ```bash
-    git push origin feature/sua-funcionalidade
+    git commit -m "feat: Adiciona nova feature"
     ```
 
-6.  **Abra um pull request** para a branch `main` do projeto original.
+4.  **Envie suas alterações** para o seu fork:
+
+    ```bash
+    git push origin feature/nome-da-feature
+    ```
+
+5.  **Abra um pull request** para a branch `main` do repositório original.
 
 ### Recursos Úteis
 
-- **<a href="https://www.atlassian.com/br/git/tutorials/making-a-pull-request" target="_blank">📝 Como criar uma solicitação pull</a>**
+- **<a href="https://www.atlassian.com/br/git/tutorials/making-a-pull-request" target="_blank">📝 Como criar um Pull Request</a>**
 
-- **<a href="https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716" target="_blank">💾 Padrão de commit</a>**
+- **<a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank">💾 Padrão de Commits Convencionais</a>**
 
-## 📜 Licença
+## 📜 Licença <a name="licenca"></a>
 
-Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
+Este projeto está sob a **licença MIT**. Consulte o arquivo **[LICENSE](LICENSE)** para obter mais detalhes.
+
+> ℹ️ **Aviso de Licença:** © 2025 Alan Ryan da Silva Domingues. Este projeto está licenciado sob os termos da licença MIT. Isso significa que você pode usá-lo, copiá-lo, modificá-lo e distribuí-lo com liberdade, desde que mantenha os avisos de copyright.
