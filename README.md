@@ -242,13 +242,15 @@ O **Serenitas System** segue uma estrutura típica de projetos Java Web baseados
   ├── lib/                        # Dependências .jar (drivers, bibliotecas) usadas no projeto
   ├── LICENSE                     # Licença do projeto
   ├── README.md                   # Documentação e instruções do projeto
+  ├── src/                        # Código-fonte Java
+  │   └── .gitkeep                # Mantém o diretório versionado mesmo quando vazio
   └── web/                        # Raiz da aplicação web
       ├── *.jsp                   # Páginas que contêm a lógica e a apresentação
       ├── *.html                  # Páginas estáticas
       ├── assets/                 # Recursos de imagem
       ├── styles/                 # Arquivos de estilo CSS
       ├── .env                    # Arquivo de configuração de ambiente
-      └── WEB-INF/
+      └── WEB-INF/                # Diretório protegido da aplicação
           ├── web.xml             # Descritor de implantação da aplicação
           └── lib/                # Local onde as dependências são copiadas durante o build
   ```
