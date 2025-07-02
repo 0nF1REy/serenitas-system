@@ -17,21 +17,21 @@ CREATE TABLE IF NOT EXISTS tb_produto (
     INDEX idx_marca (marca)
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-SHOW TABLES;
+-- SHOW TABLES;
 
-DESC tb_produto;
+-- DESC tb_produto;
 
-INSERT INTO tb_produto (nome, marca, preco) 
-VALUES ('TV', 'Toshiba', 1500.00);
+-- INSERT INTO tb_produto (nome, marca, preco) 
+-- VALUES ('TV', 'Toshiba', 1500.00);
 
-INSERT INTO tb_produto (nome, marca, preco) 
-VALUES ('Notebook', 'Dell', 3499.90);
+-- INSERT INTO tb_produto (nome, marca, preco) 
+-- VALUES ('Notebook', 'Dell', 3499.90);
 
-DELETE FROM tb_produto WHERE id_produto = 1;
+-- DELETE FROM tb_produto WHERE id_produto = 1;
 
-SELECT * FROM tb_produto;
+-- SELECT * FROM tb_produto;
 
-SELECT * FROM tb_produto WHERE nome LIKE "%No%";
+-- SELECT * FROM tb_produto WHERE nome LIKE "%No%";
 
-DROP DATABASE serenitas_db;
+-- DROP DATABASE serenitas_db;
 
