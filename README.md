@@ -105,7 +105,7 @@ Este projeto implementa funcionalidades de gestão de produtos utilizando uma ab
 
 *   ### *Cadastrar via CSV:*
 
-<img src="./readme_assets/cadastrar-via-csv.png" alt="Consultar via CSV"/>
+<img src="./readme_assets/cadastrar-via-csv.png" alt="Cadastrar via CSV"/>
 
 ## 🚀 Começando
 
@@ -128,7 +128,7 @@ Os seguintes softwares precisam estar instalado em seu sistema antes de você po
   <img src="./readme_assets/mysql-logo.png" width="200" alt="MySQL Logo" />
 </a>
 <a href="https://tomcat.apache.org/" target="_blank">
-  <img src="./readme_assets/apache-tomcat-logo.png" width="200" alt="MySQL Logo" />
+  <img src="./readme_assets/apache-tomcat-logo.png" width="200" alt="Apache Tomcat Logo" />
 </a>
 
 </div>
@@ -242,13 +242,12 @@ O **Serenitas System** segue uma estrutura típica de projetos Java Web baseados
   ├── lib/                        # Dependências .jar (drivers, bibliotecas) usadas no projeto
   ├── LICENSE                     # Licença do projeto
   ├── README.md                   # Documentação e instruções do projeto
-  ├── src/                        # Diretório para código-fonte Java (não utilizado nesta arquitetura)
   └── web/                        # Raiz da aplicação web
       ├── *.jsp                   # Páginas que contêm a lógica e a apresentação
       ├── *.html                  # Páginas estáticas
       ├── assets/                 # Recursos de imagem
       ├── styles/                 # Arquivos de estilo CSS
-      ├── .env                    # Arquivo de configuração de ambiente (NÃO ENVIAR PARA O GIT)
+      ├── .env                    # Arquivo de configuração de ambiente
       └── WEB-INF/
           ├── web.xml             # Descritor de implantação da aplicação
           └── lib/                # Local onde as dependências são copiadas durante o build
