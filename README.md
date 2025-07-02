@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/0nF1REy/serenitas-system" target="_blank">
-    <img src="./readme_assets/serenitas-system-logo.png" width="200" alt="File Storage API Logo" />
+    <img src="./readme_assets/serenitas-system-logo.png" width="200" alt="Serenitas System Logo" />
   </a>
 </p>
 
@@ -24,9 +24,10 @@
 ## 🧭 Guia de Navegação (Índice)
 
 - **[📖 Descrição](#descricao)** 
-- **[🎯 Propósito](#proposito)** 
-- **[✨ Funcionalidades](#funcionalidades)** 
-- **[💻 Tecnologias](#tecnologias)** 
+- **[🎯 Propósito do Projeto](#proposito)** 
+- **[✨ Funcionalidades e Abordagem Técnica](#funcionalidades)** 
+- **[💻 Tecnologias Utilizadas](#tecnologias)** 
+- **[📸 Capturas de Tela](#capturas)** 
 - **[🔧 Pré-requisitos](#requisitos)** 
 - **[⚙️ Execução](#execucao)** 
 - **[🌐 Acesso](#acesso)** 
@@ -41,55 +42,50 @@
 
 ## 📖 Descrição <a name="descricao"></a>
 
-Este repositório abriga o "**Serenitas System**", um sistema web voltado à gestão de produtos. Desenvolvido para simplificar o controle de estoque e informações, o sistema oferece uma solução prática, eficiente e integrada, com suporte a importação de dados em massa.
-
-Desenvolvido com Java, JSP, MySQL e Apache Tomcat.
+O Serenitas System é um sistema web para gerenciamento de produtos e controle de estoque. Ele oferece funcionalidades essenciais como operações CRUD (Criar, Ler, Atualizar, Excluir) e importação em massa de dados via arquivos CSV. A aplicação foi desenvolvida com um stack clássico de Java para Web, utilizando JSP (JavaServer Pages) para processar a lógica de negócio e renderizar as views, com persistência de dados em MySQL via JDBC.
 
 ## 🎯 Propósito do Projeto <a name="proposito"></a>
 
 O **Serenitas System** foi criado com um duplo propósito, servindo tanto como uma ferramenta funcional quanto como um recurso de aprendizado.
 
-- **Como Ferramenta:** Prover uma solução web completa e intuitiva para gerenciamento de produtos, com funcionalidades essenciais como operações CRUD e cadastro em massa via arquivos `.csv`.
+- **Como Ferramenta:** Prover uma solução web funcional e intuitiva para gerenciamento de produtos, com operações essenciais para controle de estoque.
 
-- **Como Recurso Educacional:** Servir como um case de estudo prático para o desenvolvimento Java Web com um stack clássico, demonstrando a arquitetura em camadas e o ciclo completo de build e deploy.
+- **Como Recurso Educacional:** Servir como um exemplo prático de uma aplicação Java Web construída com a arquitetura MVC Modelo 1, onde as páginas JSP concentram tanto a lógica de controle quanto a de apresentação. É um excelente ponto de partida para entender os fundamentos de JSP e JDBC antes de avançar para arquiteturas mais complexas como o MVC Modelo 2.
 
-> 🏛️ **Ideal para Fins Acadêmicos e de Portfólio:** A estrutura clara e a implementação completa tornam o **Serenitas System** uma fundação excelente para projetos acadêmicos, Trabalhos de Conclusão de Curso (TCCs) e como uma peça central para um portfólio de desenvolvedor Java.
+> 🏛️ **Ideal para Fins Acadêmicos e de Portfólio:** A simplicidade estrutural e a clareza do código tornam o Serenitas System uma ótima base para projetos acadêmicos e para demonstrar competências fundamentais no ecossistema Java Web.
 
-## ✨ Funcionalidades e Práticas Adotadas <a name="funcionalidades"></a>
+## ✨ Funcionalidades e Abordagem Técnica <a name="funcionalidades"></a>
 
-Este projeto demonstra práticas de desenvolvimento consolidadas no ecossistema Java, focando em clareza e manutenibilidade.
+Este projeto implementa funcionalidades de gestão de produtos utilizando uma abordagem direta e focada nas tecnologias essenciais.
 
 - **Operações CRUD Completas:** Implementação de todas as operações de criação, leitura, atualização e exclusão para a gestão de produtos.
 
-- **Importação em Massa:** Funcionalidade robusta para cadastro de múltiplos produtos de uma só vez a partir de arquivos no formato **`.csv`**.
+- **Importação em Massa:** Funcionalidade para cadastro de múltiplos produtos de uma só vez a partir de arquivos no formato .csv.
 
-- **Arquitetura em Camadas:** Código estruturado com uma clara **separação de responsabilidades** entre a camada de Apresentação (JSP), a camada de Controle (Servlets) e a camada de Acesso a Dados (DAO).
+- **Arquitetura MVC Modelo 1:** A lógica de controle e a de apresentação são centralizadas nas páginas JSP. Cada JSP é responsável por receber a requisição, processar os dados, interagir com o banco e gerar a resposta HTML.
 
-- **Persistência com JDBC Puro:** Conexão e manipulação do banco de dados **MySQL** utilizando a API **JDBC (Java Database Connectivity)**, demonstrando o controle de transações e recursos de forma explícita.
+- **Persistência com JDBC Puro:** A conexão e a manipulação do banco de dados MySQL são feitas diretamente nos JSPs utilizando a API JDBC (Java Database Connectivity) e scriptlets Java (`<% ... %>`).
 
-- **Padrão de Projeto DAO:** Aplicação do padrão **Data Access Object** para encapsular a lógica de acesso ao banco de dados, promovendo baixo acoplamento e facilitando a manutenção.
+- **Renderização no Servidor com JSP:** A interface de usuário é construída e renderizada dinamicamente no lado do servidor utilizando JSP.
 
-- **Renderização no Servidor com JSP:** Interface de usuário construída com **JSP (JavaServer Pages)** e **JSTL (JSP Standard Tag Library)** para a renderização dinâmica de conteúdo no lado do servidor.
+- **Automação de Build com Apache Ant:** Utilização do Apache Ant para automatizar o processo de compilação, gerenciamento de dependências e empacotamento da aplicação em um arquivo .war.
 
-- **Automação de Build com Apache Ant:** Utilização do **Apache Ant** para automatizar o processo de compilação, gerenciamento de dependências e empacotamento da aplicação em um arquivo **`.war`**.
+- **Externalização de Configuração:** As credenciais do banco de dados são mantidas em um arquivo .env externo, separado do código-fonte, para maior segurança e portabilidade.
 
-- **Externalização de Configuração:** Boas práticas de segurança e portabilidade ao manter as credenciais do banco de dados em um arquivo **`.env`** externo, separado do código-fonte.
-
-- **Deploy em Contêiner de Servlets:** O projeto é empacotado como um arquivo **WAR (Web Application Archive)**, pronto para ser implantado em qualquer contêiner de Servlets compatível, como o **Apache Tomcat**.
+- **Deploy em Contêiner de Servlets:** O projeto é empacotado como um arquivo WAR (Web Application Archive), pronto para ser implantado em qualquer contêiner de Servlets, como o Apache Tomcat.
 
 ## 💻 Tecnologias Utilizadas <a name="tecnologias"></a>
 
 | Tecnologia | Descrição |
 |------------|-----------|
-| Java 8+                      | *Linguagem de programação principal do sistema.*|
-| MySQL                        | *Banco de dados relacional para persistência dos dados de produtos.* |
-| JDBC (Java Database Conn.)   | *API padrão do Java para conexão e execução de queries no banco de dados.* |
-| Java Servlets                | *Componentes que recebem e processam as requisições HTTP na camada de controle.*|
-| JSP (JavaServer Pages) & JSTL| *Tecnologias para renderização dinâmica das páginas web no lado do servidor.*|
-| Apache Tomcat                | *Contêiner de Servlets utilizado para executar a aplicação web.*|
-| Apache Ant                   | *Ferramenta para automação do processo de compilação e empacotamento da aplicação (.war).* |
+| Java 8+ (via JSP)                     | *Linguagem utilizada dentro dos JSPs (scriptlets) para a lógica de negócio.*|
+| JSP (JavaServer Pages)                       | *Tecnologia central para processar requisições e renderizar as páginas web.* |
+| JDBC (Java Database Conn.)   | *API nativa para conectividade com o banco de dados.* |
+| MySQL                | *Banco de dados relacional para persistência de dados.*|
+| Apache Tomcat                | *Contêiner de Servlets para execução da aplicação web.*|
+| Apache Ant                   | *Ferramenta para automação de build e empacotamento (.war).* |
 
-## 📸 Capturas de Tela
+## 📸 Capturas de Tela <a name="capturas"></a>
 
 *   ### *Apresentação:*
 
@@ -237,37 +233,25 @@ Se tudo estiver configurado corretamente, essa URL carregará a interface princi
 
 ## 📁 Estrutura do Projeto <a name="estrutura"></a>
 
-O **Serenitas System** segue uma estrutura organizada em camadas, típica de aplicações Java Web com JSP e Servlets. Abaixo, uma visão geral dos diretórios e arquivos principais:
+O **Serenitas System** segue uma estrutura típica de projetos Java Web baseados em JSP. A lógica de negócio e o acesso a dados estão contidos diretamente nos arquivos .jsp.
 
   ```
   serenitas-system
-  ├── build.xml               # Script de build para Apache Ant
-  ├── database
-  │   └── serenitas.sql       # Script SQL para criação do banco de dados
-  ├── LICENSE                 # Licença do projeto
-  ├── README.md               # Documentação e instruções do projeto
-  ├── src
-  │   └── conf
-  │       └── MANIFEST.MF     # Arquivo de manifesto da aplicação Java
-  └── web
-      ├── altpro.jsp          # Tela de alteração de produto
-      ├── apresentacao.html   # Página de apresentação
-      ├── assets
-      │   └── images
-      │       └── bg.gif      # Imagem de fundo
-      ├── cadpro.html         # Formulário de cadastro de produto (versão HTML)
-      ├── conpro.html         # Consulta de produto (HTML)
-      ├── conpro.jsp          # Consulta de produto (dinâmica)
-      ├── csv.jsp             # Tela para importação via CSV
-      ├── excpro.jsp          # Tela de exclusão de produto
-      ├── index.html          # Página inicial
-      ├── listapro.jsp        # Listagem de produtos
-      ├── META-INF
-      │   └── context.xml     # Configurações de contexto do Tomcat
-      ├── salvar_produtos.jsp # Lógica para salvar produtos
-      ├── tb_produto.csv      # Exemplo de arquivo CSV
-      └── WEB-INF
-          └── web.xml         # Configurações do deployment da aplicação
+  ├── build.xml                   # Script de build para Apache Ant
+  ├── database/                   # Contém o script .sql para criar o banco de dados
+  ├── lib/                        # Dependências .jar (drivers, bibliotecas) usadas no projeto
+  ├── LICENSE                     # Licença do projeto
+  ├── README.md                   # Documentação e instruções do projeto
+  ├── src/                        # Diretório para código-fonte Java (não utilizado nesta arquitetura)
+  └── web/                        # Raiz da aplicação web
+      ├── *.jsp                   # Páginas que contêm a lógica e a apresentação
+      ├── *.html                  # Páginas estáticas
+      ├── assets/                 # Recursos de imagem
+      ├── styles/                 # Arquivos de estilo CSS
+      ├── .env                    # Arquivo de configuração de ambiente (NÃO ENVIAR PARA O GIT)
+      └── WEB-INF/
+          ├── web.xml             # Descritor de implantação da aplicação
+          └── lib/                # Local onde as dependências são copiadas durante o build
   ```
 
 ---

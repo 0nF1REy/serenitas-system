@@ -1,15 +1,32 @@
-# Arquivos de ambiente e build
+# Arquivos de ambiente e de dependências
+# Manter as credenciais do banco de dados fora do controle de versão
 .env
-*.class
+
+# Arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos de Log
+*.log
+
+# Arquivos compilados e pacotes de distribuição
 build/
-nbproject/private/
-
-# VS Code
-.vscode/
-
-# IntelliJ IDEA
-.idea/
-*.iml
-
-# Artefatos de distribuição
 dist/
+*.class
+*.war
+*.jar
+*.ear
+
+# Configurações de IDE
+.idea/
+.vscode/
+*.iml
+*.nbattrs
+
+# Diretório de configuração do NetBeans
+nbproject/
+
+# Arquivos gerados pelo NetBeans
+nbbuild.xml
+nb-configuration.xml
