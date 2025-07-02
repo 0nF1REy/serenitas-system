@@ -23,17 +23,17 @@
 
 ## 🧭 Guia de Navegação (Índice)
 
-- **[📖 Descrição](#descricao)** XXX
-- **[🎯 Objetivos](#objetivos)**
-- **[✨ Funcionalidades](#funcionalidades)** XXX
-- **[💻 Tecnologias](#tecnologias)**
-- **[🔧 Pré-requisitos](#requisitos)** XXX
-- **[⚙️ Execução](#execucao)** XXX
-- **[🌐 Acesso](#acesso)** XXX
+- **[📖 Descrição](#descricao)** 
+- **[🎯 Propósito](#proposito)** 
+- **[✨ Funcionalidades](#funcionalidades)** 
+- **[💻 Tecnologias](#tecnologias)** 
+- **[🔧 Pré-requisitos](#requisitos)** 
+- **[⚙️ Execução](#execucao)** 
+- **[🌐 Acesso](#acesso)** 
 - **[📁 Estrutura](#estrutura)**
-- **[👤 Desenvolvedor](#desenvolvedor)** XXX
-- **[📫 Contribuir](#contribuicao)** XXX
-- **[📜 Licença](#licenca)** XXX
+- **[👤 Desenvolvedor](#desenvolvedor)**
+- **[📫 Contribuir](#contribuicao)** 
+- **[📜 Licença](#licenca)**
 
 <h1 align="center">
   Serenitas System
@@ -41,22 +41,53 @@
 
 ## 📖 Descrição <a name="descricao"></a>
 
-Este repositório abriga o "**Serenitas System**", um sistema web para gestão de produtos. O projeto foi desenvolvido para simplificar e otimizar o controle de estoque e informações de produtos, oferecendo funcionalidades como cadastro, listagem, alteração, exclusão e importação via CSV. O sistema utiliza tecnologias como Java, JSP, MySQL e Apache Tomcat, criando uma solução completa para gerenciamento de produtos.
+Este repositório abriga o "**Serenitas System**", um sistema web voltado à gestão de produtos. Desenvolvido para simplificar o controle de estoque e informações, o sistema oferece uma solução prática, eficiente e integrada, com suporte a importação de dados em massa.
 
-Os principais recursos incluem:
+Desenvolvido com Java, JSP, MySQL e Apache Tomcat.
 
-*   **Criação de Produto:** Adicione novos produtos ao sistema com facilidade.
-*   **Listagem de Produtos:** Visualize uma lista completa de todos os produtos.
-*   **Atualização de Produto:** Modifique as informações dos produtos existentes.
-*   **Exclusão de Produto:** Remova produtos do sistema.
-*   **Importação CSV:** Importe dados de produtos em massa por meio de arquivos CSV.
+## 🎯 Propósito do Projeto <a name="proposito"></a>
 
-## ✨ Funcionalidades <a name="funcionalidades"></a>
+O **Serenitas System** foi criado com um duplo propósito, servindo tanto como uma ferramenta funcional quanto como um recurso de aprendizado.
 
-*   Interface web amigável ao usuário.
-*   Funcionalidades completas para gerenciamento de produtos.
-*   Integração com banco de dados para armazenamento persistente.
-*   Importação CSV para entrada eficiente de dados.
+- **Como Ferramenta:** Prover uma solução web completa e intuitiva para gerenciamento de produtos, com funcionalidades essenciais como operações CRUD e cadastro em massa via arquivos `.csv`.
+
+- **Como Recurso Educacional:** Servir como um case de estudo prático para o desenvolvimento Java Web com um stack clássico, demonstrando a arquitetura em camadas e o ciclo completo de build e deploy.
+
+> 🏛️ **Ideal para Fins Acadêmicos e de Portfólio:** A estrutura clara e a implementação completa tornam o **Serenitas System** uma fundação excelente para projetos acadêmicos, Trabalhos de Conclusão de Curso (TCCs) e como uma peça central para um portfólio de desenvolvedor Java.
+
+## ✨ Funcionalidades e Práticas Adotadas <a name="funcionalidades"></a>
+
+Este projeto demonstra práticas de desenvolvimento consolidadas no ecossistema Java, focando em clareza e manutenibilidade.
+
+- **Operações CRUD Completas:** Implementação de todas as operações de criação, leitura, atualização e exclusão para a gestão de produtos.
+
+- **Importação em Massa:** Funcionalidade robusta para cadastro de múltiplos produtos de uma só vez a partir de arquivos no formato **`.csv`**.
+
+- **Arquitetura em Camadas:** Código estruturado com uma clara **separação de responsabilidades** entre a camada de Apresentação (JSP), a camada de Controle (Servlets) e a camada de Acesso a Dados (DAO).
+
+- **Persistência com JDBC Puro:** Conexão e manipulação do banco de dados **MySQL** utilizando a API **JDBC (Java Database Connectivity)**, demonstrando o controle de transações e recursos de forma explícita.
+
+- **Padrão de Projeto DAO:** Aplicação do padrão **Data Access Object** para encapsular a lógica de acesso ao banco de dados, promovendo baixo acoplamento e facilitando a manutenção.
+
+- **Renderização no Servidor com JSP:** Interface de usuário construída com **JSP (JavaServer Pages)** e **JSTL (JSP Standard Tag Library)** para a renderização dinâmica de conteúdo no lado do servidor.
+
+- **Automação de Build com Apache Ant:** Utilização do **Apache Ant** para automatizar o processo de compilação, gerenciamento de dependências e empacotamento da aplicação em um arquivo **`.war`**.
+
+- **Externalização de Configuração:** Boas práticas de segurança e portabilidade ao manter as credenciais do banco de dados em um arquivo **`.env`** externo, separado do código-fonte.
+
+- **Deploy em Contêiner de Servlets:** O projeto é empacotado como um arquivo **WAR (Web Application Archive)**, pronto para ser implantado em qualquer contêiner de Servlets compatível, como o **Apache Tomcat**.
+
+## 💻 Tecnologias Utilizadas <a name="tecnologias"></a>
+
+| Tecnologia | Descrição |
+|------------|-----------|
+| Java 8+                      | *Linguagem de programação principal do sistema.*|
+| MySQL                        | *Banco de dados relacional para persistência dos dados de produtos.* |
+| JDBC (Java Database Conn.)   | *API padrão do Java para conexão e execução de queries no banco de dados.* |
+| Java Servlets                | *Componentes que recebem e processam as requisições HTTP na camada de controle.*|
+| JSP (JavaServer Pages) & JSTL| *Tecnologias para renderização dinâmica das páginas web no lado do servidor.*|
+| Apache Tomcat                | *Contêiner de Servlets utilizado para executar a aplicação web.*|
+| Apache Ant                   | *Ferramenta para automação do processo de compilação e empacotamento da aplicação (.war).* |
 
 ## 📸 Capturas de Tela
 
@@ -201,6 +232,43 @@ Após a implantação bem-sucedida no **Tomcat**, acesse o **Serenitas System** 
 - 🔗 **URL de acesso: ```http://localhost:8080/serenitas-system/```**
   
 Se tudo estiver configurado corretamente, essa URL carregará a interface principal do sistema, onde você poderá gerenciar seus produtos com facilidade.
+
+---
+
+## 📁 Estrutura do Projeto <a name="estrutura"></a>
+
+O **Serenitas System** segue uma estrutura organizada em camadas, típica de aplicações Java Web com JSP e Servlets. Abaixo, uma visão geral dos diretórios e arquivos principais:
+
+  ```
+  serenitas-system
+  ├── build.xml               # Script de build para Apache Ant
+  ├── database
+  │   └── serenitas.sql       # Script SQL para criação do banco de dados
+  ├── LICENSE                 # Licença do projeto
+  ├── README.md               # Documentação e instruções do projeto
+  ├── src
+  │   └── conf
+  │       └── MANIFEST.MF     # Arquivo de manifesto da aplicação Java
+  └── web
+      ├── altpro.jsp          # Tela de alteração de produto
+      ├── apresentacao.html   # Página de apresentação
+      ├── assets
+      │   └── images
+      │       └── bg.gif      # Imagem de fundo
+      ├── cadpro.html         # Formulário de cadastro de produto (versão HTML)
+      ├── conpro.html         # Consulta de produto (HTML)
+      ├── conpro.jsp          # Consulta de produto (dinâmica)
+      ├── csv.jsp             # Tela para importação via CSV
+      ├── excpro.jsp          # Tela de exclusão de produto
+      ├── index.html          # Página inicial
+      ├── listapro.jsp        # Listagem de produtos
+      ├── META-INF
+      │   └── context.xml     # Configurações de contexto do Tomcat
+      ├── salvar_produtos.jsp # Lógica para salvar produtos
+      ├── tb_produto.csv      # Exemplo de arquivo CSV
+      └── WEB-INF
+          └── web.xml         # Configurações do deployment da aplicação
+  ```
 
 ---
 
