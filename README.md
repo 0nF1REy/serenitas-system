@@ -1,6 +1,8 @@
-<h1 align="center">
-  Serenitas System
-</h1>
+<p align="center">
+  <a href="https://github.com/0nF1REy/serenitas-system" target="_blank">
+    <img src="./readme_assets/serenitas-system-logo.png" width="200" alt="File Storage API Logo" />
+  </a>
+</p>
 
 <div align="center">
 
@@ -19,9 +21,27 @@
 
 </div>
 
+## 🧭 Guia de Navegação (Índice)
+
+- **[📖 Descrição](#descricao)** XXX
+- **[🎯 Objetivos](#objetivos)**
+- **[✨ Funcionalidades](#funcionalidades)** XXX
+- **[💻 Tecnologias](#tecnologias)**
+- **[🔧 Pré-requisitos](#requisitos)** XXX
+- **[⚙️ Execução](#execucao)** XXX
+- **[🌐 Acesso](#acesso)** XXX
+- **[📁 Estrutura](#estrutura)**
+- **[👤 Desenvolvedor](#desenvolvedor)** XXX
+- **[📫 Contribuir](#contribuicao)** XXX
+- **[📜 Licença](#licenca)** XXX
+
+<h1 align="center">
+  Serenitas System
+</h1>
+
 ## 📖 Descrição <a name="descricao"></a>
 
-Este repositório abriga o "Serenitas System", um sistema web para gestão de produtos. O projeto foi desenvolvido para simplificar e otimizar o controle de estoque e informações de produtos, oferecendo funcionalidades como cadastro, listagem, alteração, exclusão e importação via CSV. O sistema utiliza tecnologias como Java, JSP, MySQL e Apache Tomcat, criando uma solução completa para gerenciamento de produtos.
+Este repositório abriga o "**Serenitas System**", um sistema web para gestão de produtos. O projeto foi desenvolvido para simplificar e otimizar o controle de estoque e informações de produtos, oferecendo funcionalidades como cadastro, listagem, alteração, exclusão e importação via CSV. O sistema utiliza tecnologias como Java, JSP, MySQL e Apache Tomcat, criando uma solução completa para gerenciamento de produtos.
 
 Os principais recursos incluem:
 
@@ -31,7 +51,7 @@ Os principais recursos incluem:
 *   **Exclusão de Produto:** Remova produtos do sistema.
 *   **Importação CSV:** Importe dados de produtos em massa por meio de arquivos CSV.
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades <a name="funcionalidades"></a>
 
 *   Interface web amigável ao usuário.
 *   Funcionalidades completas para gerenciamento de produtos.
@@ -93,7 +113,6 @@ Os seguintes softwares precisam estar instalado em seu sistema antes de você po
 *   **Java JDK:** Kit de Desenvolvimento Java 8 ou superior. [https://www.oracle.com/java/](https://www.oracle.com/java/)
 *   **MySQL:** Servidor MySQL. [https://www.mysql.com/](https://www.mysql.com/)
 *   **Apache Tomcat:** Contêiner de Servlets para executar a aplicação. [https://tomcat.apache.org/](https://tomcat.apache.org/)
-
 
 ---
 
