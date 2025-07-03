@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/0nF1REy/serenitas-system" target="_blank">
-    <img src="./readme_assets/serenitas-system-logo.png" width="200" alt="Serenitas System Logo" />
+    <img src="./readme_images/serenitas-system-logo.png" width="200" alt="Serenitas System Logo" />
   </a>
 </p>
 
@@ -89,23 +89,23 @@ Este projeto implementa funcionalidades de gestão de produtos utilizando uma ab
 
 *   ### *Apresentação:*
 
-<img src="./readme_assets/pagina-principal.png" alt="Apresentação"/>
+<img src="./readme_images/pagina-principal.png" alt="Apresentação"/>
 
 *   ### *Cadastro de Produtos:*
 
-<img src="./readme_assets/cadastro-de-produtos.png" alt="Cadastro de Produtos"/>
+<img src="./readme_images/cadastro-de-produtos.png" alt="Cadastro de Produtos"/>
 
 *   ### *Listagem de Produtos:*
 
-<img src="./readme_assets/listagem-de-produtos.png" alt="Listagem de Produtos"/>
+<img src="./readme_images/listagem-de-produtos.png" alt="Listagem de Produtos"/>
 
 *   ### *Consultar Produtos:*
 
-<img src="./readme_assets/consultar-produtos.png" alt="Consultar Produtos"/>
+<img src="./readme_images/consultar-produtos.png" alt="Consultar Produtos"/>
 
 *   ### *Cadastrar via CSV:*
 
-<img src="./readme_assets/cadastrar-via-csv.png" alt="Cadastrar via CSV"/>
+<img src="./readme_images/cadastrar-via-csv.png" alt="Cadastrar via CSV"/>
 
 ## 🚀 Começando
 
@@ -116,19 +116,19 @@ Os seguintes softwares precisam estar instalado em seu sistema antes de você po
 ## 🔧 Pré-requisitos <a name="requisitos"></a>
 
 <a href="https://git-scm.com/" target="_blank">
-  <img src="./readme_assets/git-logo.png" width="200" alt="Git Logo" />
+  <img src="./readme_images/git-logo.png" width="200" alt="Git Logo" />
 </a>
 <a href="https://ant.apache.org/" target="_blank">
-  <img src="./readme_assets/apache-ant-logo.png" width="200" alt="Apache Ant Logo" />
+  <img src="./readme_images/apache-ant-logo.png" width="200" alt="Apache Ant Logo" />
 </a>
 <a href="https://www.oracle.com/java/" target="_blank">
-  <img src="./readme_assets/java-jdk-logo.png" width="200" alt="Java JDK Logo" />
+  <img src="./readme_images/java-jdk-logo.png" width="200" alt="Java JDK Logo" />
 </a>
 <a href="https://www.mysql.com/" target="_blank">
-  <img src="./readme_assets/mysql-logo.png" width="200" alt="MySQL Logo" />
+  <img src="./readme_images/mysql-logo.png" width="200" alt="MySQL Logo" />
 </a>
 <a href="https://tomcat.apache.org/" target="_blank">
-  <img src="./readme_assets/apache-tomcat-logo.png" width="200" alt="Apache Tomcat Logo" />
+  <img src="./readme_images/apache-tomcat-logo.png" width="200" alt="Apache Tomcat Logo" />
 </a>
 
 </div>
@@ -265,7 +265,7 @@ O **Serenitas System** segue uma estrutura típica de projetos Java Web baseados
   <tr>
     <td align="center">
       <a href="https://github.com/0nF1REy" target="_blank">
-        <img src="./readme_assets/alan-ryan.jpg" height="160px" style="border-radius: 50%; border: 3px solid #0077B5;" alt="Foto de Alan Ryan"/><br>
+        <img src="./readme_images/alan-ryan.jpg" height="160px" style="border-radius: 50%; border: 3px solid #0077B5;" alt="Foto de Alan Ryan"/><br>
         <b>Alan Ryan</b>
       </a>
       <p>
